@@ -36,4 +36,4 @@ var allAnagrams = function (string) {
   return result;
 };
 
-allAnagrams("abc");
+allAnagrams("cba") // ["cba", "cab", "bca", "bac", "acb", "abc"]
