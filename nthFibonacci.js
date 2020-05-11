@@ -20,6 +20,26 @@
  *
  */
 
+ /*
+ i: number
+ o: number
+ c: returns the nth Fibonacci number
+ e: na
+ */
+
 var nthFibonacci = function (n) {
-  // TODO: implement me!
+  // base case
+  if (n === 0) {
+    return 0
+  }
+  if (n === 1 || n === 2) {
+    return 1
+  }
+
+  //recursive case
+  return nthFibonacci(n - 1) + nthFibonacci(n - 2);
 };
+
+//  nthFibonacci(2); // => 1
+//  nthFibonacci(3); // => 2
+ nthFibonacci(4); // => 3
