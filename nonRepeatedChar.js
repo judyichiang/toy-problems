@@ -7,7 +7,26 @@
  */
 
 var firstNonRepeatedCharacter = function (string) {
-  // TODO: your solution here
+  var repeats = [];
+  //base case
+  if (
+    string === undefined ||
+    string.length === 0 ||
+    typeof string !== "string"
+  ) {
+    return null;
+  }
+  for (var i = 0; i < string.length; i++) {
+    if (
+      !repeats.includes(string[i]) &&
+      string.indexOf(string[i], i + 1) === -1
+    ) {
+      return string[i];
+    } else {
+      repeats.push(string[i]);
+    }
+  }
+  return null;
 };
 
-/* solution ---------------------------------------------------------------------------------------
+// https://repl.it/@Kilrpanda/SourCarefulHypothesis#index.js
